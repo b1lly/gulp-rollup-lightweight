@@ -4,6 +4,7 @@
   "description": "A thin light-weight gulp plugin that makes working with rollup easy for the latest versions!",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"easy pass!\""
   },
   "repository": {
     "type": "git",
