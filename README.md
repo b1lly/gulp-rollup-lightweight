@@ -1,6 +1,9 @@
 # gulp-rollup-lightweight
 A [Gulp] plugin that makes working with [Rollup] easy!
 
+- Supports latest version of gulp (CLI 2.0.1 & local 4.0.0)
+- Supports latest version of rollup (CLI v1.4.1)
+
 It's a thin light-weight wrapper around the Rollup JS API that wraps
 the [Rollup] Promise in a Readable Stream.
 
