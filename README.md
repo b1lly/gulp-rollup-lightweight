@@ -9,7 +9,7 @@ the [Rollup] Promise in a Readable Stream.
 
 ## Installation
 ```bash
-npm install --save-dev gulp-rollup-stream
+npm install --save-dev gulp-rollup-lightweight
 ```
 
 ## Basic Usage
