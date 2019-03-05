@@ -1,4 +1,4 @@
-# gulp-rollup-stream
+# gulp-rollup-lightweight
 A [Gulp] plugin that makes working with [Rollup] easy!
 
 It's a thin light-weight wrapper around the Rollup JS API that wraps
