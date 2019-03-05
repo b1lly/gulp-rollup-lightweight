@@ -1,11 +1,15 @@
 const stream = require('stream');
 
-module.exports = function rollupStream(opts = {}) {
+module.exports = function(opts = {}) {
+  // All the user to provide custom rollup,
+  // or use a default found on system
   let rollup = opts.rollup || require('rollup'),
       readable = new stream.Readable();
 
-  // Implement the Rollup Promise and
-  // wrap the result in a gulp-friendly stream
+  // Readable hack ;P
+  readable._read = function() {};
+
+  // Wrap the rollup Promise in a gulp-friendly Readable stream
   rollup
     // Create a bundle
     .rollup(opts)
@@ -13,19 +17,23 @@ module.exports = function rollupStream(opts = {}) {
     .then((bundle) => {
       return bundle.generate(opts);
     })
-    // Wrap the resulted code in a stream
+    // Wrap the resulted code in our readable stream
     .then((result) => {
-      // Push the bundled code into our stream
-      stream.push(result.code);
+      result = result.output[0];
+      // Push the bundled code into our readable stream
+      readable.push(result.code);
 
-      // Optionally handle creating a source map
+      // Optionally append the source map
       if (opts.sourcemap || opts.sourceMap) {
-        stream.push('\n//# sourceMappingURL=');
-        stream.push(result.map.toUrl());
+        readable.push('\n//# sourceMappingURL=');
+        readable.push(result.map.toUrl());
       }
+
+      // EOF-signaling `null` chunk
+      readable.push(null);
     })
     .catch((error) => {
-      setImmediate(() => stream.emit('error', error));
+      setImmediate(() => readable.emit('error', error));
     });
 
   return readable;
