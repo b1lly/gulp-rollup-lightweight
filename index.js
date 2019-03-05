@@ -19,7 +19,8 @@ module.exports = function(opts = {}) {
       return bundle.generate(opts);
     })
     .then((output) => {
-      // Modern objects look a little different from legacy rollup
+      // Older versions of rollup attached code directly to the output,
+      // where newer versions contain the output within an output array
       if (!output.code) {
         output = output.output[0];
       }
