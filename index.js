@@ -6,18 +6,18 @@ module.exports = function(opts = {}) {
   let rollup = opts.rollup || require('rollup'),
       readable = new stream.Readable();
 
-  // Readable hack ;P
+  // Readable requires this to be a valid interface
   readable._read = function() {};
 
   // Wrap the rollup Promise in a gulp-friendly Readable stream
+  // Rollup works in two steps:
+  // 1. Create a {bundle} of all the files
+  // 2. Generates {output} based on the bundled
   rollup
-    // Create a bundle
     .rollup(opts)
-    // Generate code from the bundle
     .then((bundle) => {
       return bundle.generate(opts);
     })
-    // Wrap the resulted code in our readable stream
     .then((result) => {
       result = result.output[0];
       // Push the bundled code into our readable stream
