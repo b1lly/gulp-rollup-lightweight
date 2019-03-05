@@ -1,0 +1,17 @@
+{
+  "name": "gulp-rollup-stream",
+  "version": "1.0.0",
+  "description": "A modern plugin for gulp, that wraps rollup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "rollup",
+    "stream",
+    "plugin"
+  ],
+  "author": "Billy Bastardi",
+  "license": "ISC"
+}
