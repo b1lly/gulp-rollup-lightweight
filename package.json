@@ -4,8 +4,6 @@
   "description": "A thin light-weight gulp plugin that makes working with rollup easy for the latest versions!",
   "main": "index.js",
   "scripts": {
-    "compile": "projectz compile",
-    "posttest": "npm run compile"
   },
   "repository": {
     "type": "git",
