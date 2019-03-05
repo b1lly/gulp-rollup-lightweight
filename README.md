@@ -26,7 +26,7 @@ npm install --save-dev gulp-rollup-lightweight
 ## Basic Usage
 ```js
 const { dest } = require('gulp');
-const rollup = require('gulp-rollup-stream');
+const rollup = require('gulp-rollup-lightweight');
 const source = require('vinyl-source-stream');
 
 function bundle() {
@@ -45,7 +45,7 @@ function bundle() {
 ## Usage for a mixture of ES6 & CJS Modules
 ```js
 const { dest } = require('gulp');
-const rollup = require('gulp-rollup-stream');
+const rollup = require('gulp-rollup-lightweight');
 const source = require('vinyl-source-stream');
 
 // Helps to resolve NPM modules
@@ -72,7 +72,7 @@ function bundle() {
 ## Usage with custom Rollup
 ```js
 const { dest } = require('gulp');
-const rollup = require('gulp-rollup-stream');
+const rollup = require('gulp-rollup-lightweight');
 const source = require('vinyl-source-stream');
 
 function bundle() {
