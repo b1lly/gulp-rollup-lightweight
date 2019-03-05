@@ -34,5 +34,8 @@
       "daviddm",
       "daviddmdev"
     ]
+  },
+  "dependencies": {
+    "rollup": "^1.4.1"
   }
 }
