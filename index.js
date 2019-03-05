@@ -29,7 +29,7 @@ module.exports = function(opts = {}) {
       readable.push(output.code);
 
       // Optionally append the source map
-      if (opts.sourcemap || opts.sourceMap || || opts.output.sourcemap || opts.output.sourceMap) {
+      if (opts.sourcemap || opts.sourceMap || opts.output.sourcemap || opts.output.sourceMap) {
         readable.push('\n//# sourceMappingURL=');
         readable.push(output.map.toUrl());
       }
