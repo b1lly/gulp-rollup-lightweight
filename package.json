@@ -1,7 +1,7 @@
 {
   "name": "gulp-rollup-lightweight",
   "version": "1.0.1",
-  "description": "A modern plugin for gulp, that wraps rollup",
+  "description": "A thin light-weight gulp plugin that makes working with rollup easy for the latest versions!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
