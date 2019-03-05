@@ -1,6 +1,6 @@
 {
   "name": "gulp-rollup-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern plugin for gulp, that wraps rollup",
   "main": "index.js",
   "scripts": {
