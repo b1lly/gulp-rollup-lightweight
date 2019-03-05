@@ -1,8 +1,8 @@
 # gulp-rollup-stream
-A Gulp plugin that makes working with Rollup easy!
+A [Gulp] plugin that makes working with [Rollup] easy!
 
 It's a thin light-weight wrapper around the Rollup JS API that wraps
-the Rollup Promise in a Readable Stream.
+the [Rollup] Promise in a Readable Stream.
 
 ## Installation
 ```bash
@@ -75,13 +75,6 @@ function bundle() {
 }
 
 ```
-
-[npm-url]: https://npmjs.org/package/rollup-stream
-[npm-image]: https://img.shields.io/npm/v/rollup-stream.svg
-[david-url]: https://david-dm.org/Permutatrix/rollup-stream
-[david-image]: https://img.shields.io/david/Permutatrix/rollup-stream/master.svg
-[travis-url]: https://travis-ci.org/Permutatrix/rollup-stream
-[travis-image]: https://img.shields.io/travis/Permutatrix/rollup-stream/master.svg
 
 [Rollup]: https://www.npmjs.com/package/rollup
 [gulp]: http://gulpjs.com/
