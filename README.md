@@ -1,3 +1,14 @@
+<!-- BADGES/ -->
+
+<span class="badge-travisci"><a href="http://travis-ci.org/b1lly/gulp-rollup-stream" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/b1lly/gulp-rollup-stream/master.svg" alt="Travis CI Build Status" /></a></span>
+<span class="badge-npmversion"><a href="https://npmjs.org/package/gulp-rollup-lightweight" title="View this project on NPM"><img src="https://img.shields.io/npm/v/gulp-rollup-lightweight.svg" alt="NPM version" /></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/gulp-rollup-lightweight" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/gulp-rollup-lightweight.svg" alt="NPM downloads" /></a></span>
+<span class="badge-daviddm"><a href="https://david-dm.org/b1lly/gulp-rollup-stream" title="View the status of this project's dependencies on DavidDM"><img src="https://img.shields.io/david/b1lly/gulp-rollup-stream.svg" alt="Dependency Status" /></a></span>
+<span class="badge-daviddmdev"><a href="https://david-dm.org/b1lly/gulp-rollup-stream#info=devDependencies" title="View the status of this project's development dependencies on DavidDM"><img src="https://img.shields.io/david/dev/b1lly/gulp-rollup-stream.svg" alt="Dev Dependency Status" /></a></span>
+
+<!-- /BADGES -->
+
+
 # gulp-rollup-lightweight
 A [Gulp] plugin that makes working with [Rollup] easy!
 
