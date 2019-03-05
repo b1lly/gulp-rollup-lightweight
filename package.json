@@ -1,6 +1,6 @@
 {
   "name": "gulp-rollup-lightweight",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A thin light-weight gulp plugin that makes working with rollup easy for the latest versions!",
   "main": "index.js",
   "scripts": {
