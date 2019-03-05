@@ -18,15 +18,19 @@ module.exports = function(opts = {}) {
     .then((bundle) => {
       return bundle.generate(opts);
     })
-    .then((result) => {
-      result = result.output[0];
+    .then((output) => {
+      // Modern objects look a little different from legacy rollup
+      if (!output.code) {
+        output = output.output[0];
+      }
+
       // Push the bundled code into our readable stream
-      readable.push(result.code);
+      readable.push(output.code);
 
       // Optionally append the source map
       if (opts.sourcemap || opts.sourceMap) {
         readable.push('\n//# sourceMappingURL=');
-        readable.push(result.map.toUrl());
+        readable.push(output.map.toUrl());
       }
 
       // EOF-signaling `null` chunk
