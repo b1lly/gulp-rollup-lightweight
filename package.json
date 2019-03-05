@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b1lly/gulp-rollup-stream.git"
+    "url": "git+https://github.com/b1lly/gulp-rollup-lightweight.git"
   },
   "keywords": [
     "badges",
@@ -29,7 +29,7 @@
     "Billy Bastardi (http://www.wabism.com)"
   ],
   "bugs": {
-    "url": "https://github.com/b1lly/gulp-rollup-stream/issues"
+    "url": "https://github.com/b1lly/gulp-rollup-lightweight/issues"
   },
   "badges": {
     "list": [
