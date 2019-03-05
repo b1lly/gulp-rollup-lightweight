@@ -1,8 +1,8 @@
 const stream = require('stream');
 
 module.exports = function(opts = {}) {
-  // All the user to provide custom rollup,
-  // or use a default found on system
+  // Allow developer to provide custom rollup,
+  // otherwise use the default found from NPM modules
   let rollup = opts.rollup || require('rollup'),
       readable = new stream.Readable();
 

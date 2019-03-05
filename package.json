@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b1lly/gulp-rollup-stream.git",
   "keywords": [
     "gulp",
     "rollup",
@@ -13,5 +16,5 @@
     "plugin"
   ],
   "author": "Billy Bastardi",
-  "license": "ISC"
+  "license": "MIT"
 }
