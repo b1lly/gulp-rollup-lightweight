@@ -1,9 +1,9 @@
 const stream = require('stream');
 
-module.exports = function(opts = {}) {
+module.exports = function(inputOptions = {}, outputOptions = inputOptions) {
   // Allow developer to provide a custom rollup,
   // otherwise use the default found from NPM modules
-  let rollup = opts.rollup || require('rollup'),
+  let rollup = inputOptions.rollup || require('rollup'),
       readable = new stream.Readable();
 
   // Readable requires this to be a valid interface
@@ -14,11 +14,13 @@ module.exports = function(opts = {}) {
   // 1. Create a {bundle} of all the files
   // 2. Generates {output} based on the bundled
   rollup
-    .rollup(opts)
+    .rollup(inputOptions)
     .then((bundle) => {
-      return bundle.generate(opts);
+      return bundle.generate(outputOptions);
     })
     .then((output) => {
+      let _opts = Object.assign({}, inputOptions, outputOptions);
+
       // Older versions of rollup attached code directly to the output,
       // where newer versions contain the output within an output array
       if (!output.code) {
@@ -29,7 +31,7 @@ module.exports = function(opts = {}) {
       readable.push(output.code);
 
       // Optionally append the source map
-      if (opts.sourcemap || opts.sourceMap || opts.output.sourcemap || opts.output.sourceMap) {
+      if (_opts.sourcemap || _opts.sourceMap || _opts.output.sourcemap || _opts.output.sourceMap) {
         readable.push('\n//# sourceMappingURL=');
         readable.push(output.map.toUrl());
       }
